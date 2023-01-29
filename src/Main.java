@@ -24,17 +24,15 @@ public class Main {
 
         if (nop == 1) {
           Player player1 = players.get(0);
-            System.out.println(player1);
+        }
+
+        else if (nop == 2) {
+            Player player1 = players.get(0);
+            Player player2 = players.get(1);
         }
 
 
-
-
-
-
-
-
-        storyLine();
+        // storyLine();
 
 
 
@@ -42,7 +40,7 @@ public class Main {
     }
 
     private static void storyLine() {
-
+        System.out.println("*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^");
         System.out.println("On your way to the battle you pass a village where you kan rest and prepare");
     }
 
