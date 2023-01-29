@@ -5,11 +5,16 @@ public class Dice {
 
     private int dice = ThreadLocalRandom.current().nextInt(1, 7);
 
-    public Dice() {
+
+
+
+
+
+
+
+    public Dice() { // Konstruktor
         this.dice = dice;
     }
-
-
 
     public int getDice() {
         return dice;

@@ -12,6 +12,8 @@ public class Main {
         Dice d1 = new Dice();
         Dice d2 = new Dice();
 
+       int diceX2 = d1.getDice() + d2.getDice();
+
 
 
 
