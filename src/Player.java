@@ -1,20 +1,32 @@
 public class Player {
 
     private int gold;
-    private int spells;
-    private int armor;
-    private int attack;
+    private int cloak;
     private int knowledge;
     private int tower;
 
-    public Player(int gold, int spells, int armor, int attack, int knowledge, int tower) {
-        this.gold = gold;
-        this.spells = spells;
-        this.armor = armor;
-        this.attack = attack;
-        this.knowledge = knowledge;
-        this.tower = tower;
+    @Override
+    public String toString() {
+        return "Player{" +
+                "gold=" + gold +
+                ", cloak=" + cloak +
+                ", knowledge=" + knowledge +
+                ", tower=" + tower +
+                '}';
     }
+
+    public Player() {
+
+    }
+
+    public Player(int gold, int cloak, int knowledge, int tower) {
+        this.gold = gold;
+        this.tower = tower;
+        this.knowledge = knowledge;
+        this.cloak = cloak;
+    }
+
+
 
     public int getTower() {
         return tower;
@@ -32,30 +44,6 @@ public class Player {
         this.gold = gold;
     }
 
-    public int getSpells() {
-        return spells;
-    }
-
-    public void setSpells(int spells) {
-        this.spells = spells;
-    }
-
-    public int getArmor() {
-        return armor;
-    }
-
-    public void setArmor(int armor) {
-        this.armor = armor;
-    }
-
-    public int getAttack() {
-        return attack;
-    }
-
-    public void setAttack(int attack) {
-        this.attack = attack;
-    }
-
     public int getKnowledge() {
         return knowledge;
     }
@@ -64,15 +52,13 @@ public class Player {
         this.knowledge = knowledge;
     }
 
-
-    @Override
-    public String toString() {
-        return "Player{" +
-                "gold=" + gold +
-                ", spells=" + spells +
-                ", armor=" + armor +
-                ", attack=" + attack +
-                ", knowledge=" + knowledge +
-                '}';
+    public int getCloak() {
+        return cloak;
     }
+
+    public void setCloak(int cloak) {
+        this.cloak = cloak;
+    }
+
+
 }

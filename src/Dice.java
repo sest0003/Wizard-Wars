@@ -7,11 +7,6 @@ public class Dice {
 
 
 
-
-
-
-
-
     public Dice() { // Konstruktor
         this.dice = dice;
     }
