@@ -7,35 +7,51 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
 
-
     public static void main(String[] args) {
 
-       List<Player> players = new ArrayList<>();
+
+        List<Player> players = new ArrayList<>();
+
+        players.add(new Player(200, 34, 50, 100));
+        players.add(new Player(200, 30, 50, 25));
+
+        for (Player p : players) {
+            System.out.println(p.getCloak());
+            System.out.println(p.getGold());
+            System.out.println(p.getKnowledge());
+            System.out.println(p.getTower());
+
+        }
 
         do {
+
 
             displayMenu();
 
             int option = getOption();
 
-           if (option == 1)  {
-               WolfAttack wolfAttack = new WolfAttack();
-               wolfAttack.printWolf(); }
+            if (option == 1) {
+                WolfAttack wolfAttack = new WolfAttack();
+                wolfAttack.printWolf();
 
-            else if (option == 3)
-            {
-                Player sumOfP1 = players.get(0);
-                for (Player p : players) {
-                    System.out.println(p);
-                    System.out.println(p.getKnowledge());
-                    System.out.println(p.getGold());
-                    System.out.println(p.getTower());
-                    System.out.println(p.getCloak());
 
-                }
+            } else if (option == 2) {
+               Rules rules = new Rules();
+               rules.printRules();
 
-                System.out.println("Exiting....."); break; }
 
+            } else if (option == 3) {
+
+
+            } else if (option == 4) {
+                Rules rules = new Rules();
+                rules.printRules();
+
+
+            } else if (option == 5) {
+                System.out.println("Exiting.....");
+                break;
+            }
 
 
         } while (true);
@@ -43,12 +59,13 @@ public class Main {
 
     }
 
+
     private static void displayMenu() {
         System.out.println("____________________\n - Wizard Wars -\n");
-        System.out.println("1: Redwood");
-        System.out.println("2: Insert guest");
-        System.out.println("3: Rename guest");
-        System.out.println("4: Remove guest");
+        System.out.println("1: The Wolfs");
+        System.out.println("2: The market in Redwoods");
+        System.out.println("3: The gathering in Wian");
+        System.out.println("4: Rules");
         System.out.println("5: Exit");
     }
 
@@ -60,7 +77,6 @@ public class Main {
         return option;
     }
 }
-
 
 
 
