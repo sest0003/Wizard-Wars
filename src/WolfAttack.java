@@ -13,14 +13,15 @@ public class WolfAttack {
 
         int wolfs = 715;
 
-       Player player1 = new Player(200, 20, 10,10);
-        Player player2 = new Player(200, 20, 20,10);
+       Player player1 = new Player(200, 20, 10,10, "Wizzard of Oak");
+        Player player2 = new Player(200, 20, 20,10, "Druid");
 
     Scanner scanner = new Scanner(System.in);
 
 
         System.out.println();
         System.out.print("Number of wizards: ");
+
     int nPlayers = scanner.nextInt();
 
         if (nPlayers == 1) {
@@ -32,7 +33,6 @@ public class WolfAttack {
         else if (nPlayers == 2) {
 
 
-        int sumCounter = 0;
 
             int sumOfP1 = player1.getKnowledge();
         sumOfP1 += player1.getGold();

@@ -1,5 +1,6 @@
 public class Spell {
-    String name;
+    private String name;
+
 
     public Spell(String name) {
         this.name = name;

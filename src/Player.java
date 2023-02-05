@@ -1,9 +1,12 @@
 public class Player {
 
+
+
     private int gold;
     private int cloak;
     private int knowledge;
     private int tower;
+    private String name;
 
     @Override
     public String toString() {
@@ -19,11 +22,12 @@ public class Player {
 
     }
 
-    public Player(int gold, int cloak, int knowledge, int tower) {
+    public Player(int gold, int cloak, int knowledge, int tower,String name) {
         this.gold = gold;
         this.tower = tower;
         this.knowledge = knowledge;
         this.cloak = cloak;
+        this.name = name;
     }
 
 

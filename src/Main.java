@@ -7,21 +7,22 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
 
+
+
+
+
     public static void main(String[] args) {
 
+        Spells spells = new Spells();
+        spells.setSpells();
 
-        List<Player> players = new ArrayList<>();
+        List<Spell> fireSpells = new ArrayList<>();
+        fireSpells.add(new Spell("Dragon Blood"));
+        fireSpells.add(new Spell("Fire Ball"));
 
-        players.add(new Player(200, 34, 50, 100));
-        players.add(new Player(200, 30, 50, 25));
 
-        for (Player p : players) {
-            System.out.println(p.getCloak());
-            System.out.println(p.getGold());
-            System.out.println(p.getKnowledge());
-            System.out.println(p.getTower());
 
-        }
+
 
         do {
 
@@ -36,37 +37,11 @@ public class Main {
 
 
             } else if (option == 2) {
-               Rules rules = new Rules();
-               rules.printRules();
 
 
             } else if (option == 3) {
-            Spells spells = new Spells();
-                spells.getfires();
-                spells.getWater();
-                spells.getPoison();
-                spells.getWood();
-                spells.getSummon();
-
-
-
-                System.out.println("Cast your spell! type (1), or type (2) to exit.");
-                int playerInput =  scanner.nextInt();
-
-                if (playerInput == 1) {
-                    Dice p1Dice1 = new Dice();
-                    Dice p1Dice2 = new Dice();
-
-                    Dice compDice1 = new Dice();
-                    Dice compDice2 = new Dice();
-                }
-
-                if (playerInput == 2){
-                    break;
-                }
-
-
-
+                BattleOfDor battleOfDor = new BattleOfDor();
+                battleOfDor.storyLine();
 
 
 
