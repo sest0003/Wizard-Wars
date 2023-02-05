@@ -18,11 +18,12 @@ public class Spells {
     List<Spell> fireSpells = new ArrayList<>();
 
 
+
+
     public void setSpells() {
 
 
         fireSpells.add(new Spell("Dragon Blood"));
-        fireSpells.add(new Spell("Fire Ball"));
 
 
         waterSpells.add(new Spell("Calling the deep"));
@@ -48,28 +49,28 @@ public class Spells {
 
     public List<Spell> getWoodCraftSpells() {
         for (Spell wood : fireSpells) {
-            System.out.println(wood.getName());
+           wood.getName();
         }
         return woodCraftSpells;
     }
 
     public List<Spell> getPoisonSpells() {
         for (Spell p : fireSpells) {
-            System.out.println(p.getName());
+          p.getName();
         }
         return poisonSpells;
     }
 
     public List<Spell> getSummonSpells() {
         for (Spell summon : fireSpells) {
-            System.out.println(summon.getName());
+            summon.getName();
         }
         return summonSpells;
     }
 
     public List<Spell> getWaterSpells() {
         for (Spell w : fireSpells) {
-            System.out.println(w.getName());
+            w.getName();
         }
         return waterSpells;
     }
@@ -78,8 +79,9 @@ public class Spells {
     public List<Spell> getFireSpells() {
         for (Spell f : fireSpells) {
             System.out.println(f.getName());
+            }
 
-        }
+
         return fireSpells;
     }
 }

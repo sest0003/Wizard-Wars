@@ -15,10 +15,7 @@ public class Main {
 
         Spells spells = new Spells();
         spells.setSpells();
-
-        List<Spell> fireSpells = new ArrayList<>();
-        fireSpells.add(new Spell("Dragon Blood"));
-        fireSpells.add(new Spell("Fire Ball"));
+        spells.getFireSpells();
 
 
 
