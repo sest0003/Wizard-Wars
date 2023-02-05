@@ -42,7 +42,13 @@ public class Main {
 
             } else if (option == 3) {
             Spells spells = new Spells();
-                spells.Getfires();
+                spells.getfires();
+                spells.getWater();
+                spells.getPoison();
+                spells.getWood();
+                spells.getSummon();
+
+
 
                 System.out.println("Cast your spell! type (1), or type (2) to exit.");
                 int playerInput =  scanner.nextInt();
@@ -53,10 +59,6 @@ public class Main {
 
                     Dice compDice1 = new Dice();
                     Dice compDice2 = new Dice();
-
-
-
-
                 }
 
                 if (playerInput == 2){
