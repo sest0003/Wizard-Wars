@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class WolfAttack {
 
-    public void printWolf() {
+    public void wolAttack() {
 
         Dice d1 = new Dice();
         Dice d2 = new Dice();
@@ -13,8 +13,8 @@ public class WolfAttack {
 
         int wolfs = 715;
 
-       Player player1 = new Player(200, 10, 50,25);
-        Player player2 = new Player(200, 20, 40,25);
+       Player player1 = new Player(200, 20, 10,10);
+        Player player2 = new Player(200, 20, 20,10);
 
     Scanner scanner = new Scanner(System.in);
 
@@ -26,25 +26,15 @@ public class WolfAttack {
         if (nPlayers == 1) {
 
             System.out.println(player1);
-
-
-       // Player sumOfP1 = players.get(0);
-          //  for (Player p : players) {
-         //       System.out.println(p);
-           // }
-            }
-       /* sumOfP1 += player1.getArmour();
-        sumOfP1 += player1.getGold();
-        sumOfP1 += player1.getAttack();
-        sumOfP1 += player1.getSpells();
-        sumOfP1 += player1.getTower();
-    }*/
+            System.out.println(player2);
+        }
 
         else if (nPlayers == 2) {
 
 
+        int sumCounter = 0;
 
-        int sumOfP1 = player1.getKnowledge();
+            int sumOfP1 = player1.getKnowledge();
         sumOfP1 += player1.getGold();
         sumOfP1 += player1.getTower();
 
@@ -53,7 +43,7 @@ public class WolfAttack {
         sumOfP2 += player2.getTower();
 
 
-        storyLineRedwoods();
+
 
         System.out.println(sumOfP1);
         System.out.println(sumOfP2);

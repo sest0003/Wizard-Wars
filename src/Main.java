@@ -32,7 +32,7 @@ public class Main {
 
             if (option == 1) {
                 WolfAttack wolfAttack = new WolfAttack();
-                wolfAttack.printWolf();
+                wolfAttack.wolAttack();
 
 
             } else if (option == 2) {
@@ -41,6 +41,31 @@ public class Main {
 
 
             } else if (option == 3) {
+            Spells spells = new Spells();
+                spells.Getfires();
+
+                System.out.println("Cast your spell! type (1), or type (2) to exit.");
+                int playerInput =  scanner.nextInt();
+
+                if (playerInput == 1) {
+                    Dice p1Dice1 = new Dice();
+                    Dice p1Dice2 = new Dice();
+
+                    Dice compDice1 = new Dice();
+                    Dice compDice2 = new Dice();
+
+
+
+
+                }
+
+                if (playerInput == 2){
+                    break;
+                }
+
+
+
+
 
 
             } else if (option == 4) {
