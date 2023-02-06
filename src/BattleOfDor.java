@@ -91,11 +91,12 @@ public class BattleOfDor {
 
     } else if (numP2 == 4) {
       spells.getWoodCraftSpells();
-
+      spellsP2.add(spells.woodCraftSpells.get(0).getName());
 
 
     } else if (numP2 == 5) {
       spells.getSummonSpells();
+      spellsP2.add(spells.summonSpells.get(0).getName());
 
     }
 
@@ -106,23 +107,24 @@ public class BattleOfDor {
 
     if (numP12 == 1) {
       spells.getFireSpells();
-
+      spellsP1.add(spells.fireSpells.get(0).getName());
 
 
     } else if (numP12 == 2) {
       spells.getPoisonSpells();
-
+      spellsP1.add(spells.poisonSpells.get(0).getName());
 
     } else if (numP12 == 3) {
       spells.getWaterSpells();
-
+      spellsP1.add(spells.waterSpells.get(0).getName());
 
     } else if (numP12 == 4) {
       spells.getWoodCraftSpells();
-
+      spellsP1.add(spells.woodCraftSpells.get(0).getName());
 
     } else if (numP12 == 5) {
       spells.getSummonSpells();
+      spellsP1.add(spells.summonSpells.get(0).getName());
 
     }
 
@@ -135,24 +137,25 @@ public class BattleOfDor {
 
     if (numP22 == 1) {
       spells.getFireSpells();
-      //spellsP1.add(Spells spells = n;
+      spellsP2.add(spells.fireSpells.get(0).getName());
 
 
     } else if (numP22 == 2) {
       spells.getPoisonSpells();
-
+      spellsP2.add(spells.poisonSpells.get(0).getName());
 
     } else if (numP22 == 3) {
       spells.getWaterSpells();
-
+      spellsP2.add(spells.waterSpells.get(0).getName());
 
     } else if (numP22 == 4) {
       spells.getWoodCraftSpells();
-
+      spellsP2.add(spells.woodCraftSpells.get(0).getName());
 
 
     } else if (numP22 == 5) {
-      spells.getSummonSpells();;
+      spells.getSummonSpells();
+      spellsP1.add(spells.summonSpells.get(0).getName());
     }
 
 
