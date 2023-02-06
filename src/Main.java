@@ -15,7 +15,7 @@ public class Main {
 
         Spells spells = new Spells();
         spells.setSpells();
-        spells.getFireSpells();
+
 
 
 

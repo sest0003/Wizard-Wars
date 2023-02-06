@@ -19,7 +19,6 @@ public class Spells {
 
 
 
-
     public void setSpells() {
 
 

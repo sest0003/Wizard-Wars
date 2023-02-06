@@ -11,8 +11,8 @@ public class BattleOfDor {
     Spells spells = new Spells();
     spells.setSpells();
 
-    String [] sOfChoiceP1 = new String[10];
-    String [] sOfChoiceP2 = new String[10];
+    ArrayList<String> spellsP1 = new ArrayList<>();
+    ArrayList<String> spellsP2 = new ArrayList<>();
 
     Dice dice1P1 = new Dice();
     Dice dice2P1 = new Dice();
@@ -51,26 +51,23 @@ public class BattleOfDor {
 
     if (numP1 == 1) {
      spells.getFireSpells();
-     sOfChoiceP1 [0] = "Fire";
-
+     spellsP1.add(spells.fireSpells.get(0).getName());
 
     } else if (numP1 == 2) {
       spells.getPoisonSpells();
-      sOfChoiceP1 [0] = "Poison";
+        spellsP1.add(spells.poisonSpells.get(0).getName());
 
     } else if (numP1 == 3) {
       spells.getWaterSpells();
-      sOfChoiceP1 [0] = "Water";
+      spellsP1.add(spells.waterSpells.get(0).getName());
 
     } else if (numP1 == 4) {
     spells.getWoodCraftSpells();
-      sOfChoiceP1 [0] = "Wood";
-
-
+        spellsP1.add(spells.woodCraftSpells.get(0).getName());
 
     } else if (numP1 == 5) {
     spells.getSummonSpells();
-      sOfChoiceP1 [0] = "Summon";
+        spellsP1.add(spells.summonSpells.get(0).getName());
   }
 
 
@@ -79,28 +76,27 @@ public class BattleOfDor {
     System.out.print(player2Name + "; Choose your first spell: ");
     int numP2 = Main.scanner.nextInt();
 
-
     if (numP2 == 1) {
       spells.getFireSpells();
-      sOfChoiceP2 [0] = "Fire";
+        spellsP2.add(spells.fireSpells.get(0).getName());
 
 
     } else if (numP2 == 2) {
       spells.getPoisonSpells();
-      sOfChoiceP2 [0] = "Poison";
+      spellsP2.add(spells.poisonSpells.get(0).getName());
 
     } else if (numP2 == 3) {
       spells.getWaterSpells();
-      sOfChoiceP2 [0] = "Water";
+      spellsP2.add(spells.waterSpells.get(0).getName());
 
     } else if (numP2 == 4) {
       spells.getWoodCraftSpells();
-      sOfChoiceP2 [0] = "Wood";
+
 
 
     } else if (numP2 == 5) {
       spells.getSummonSpells();
-      sOfChoiceP2 [0] = "Summon";
+
     }
 
 
@@ -110,24 +106,24 @@ public class BattleOfDor {
 
     if (numP12 == 1) {
       spells.getFireSpells();
-      sOfChoiceP1 [1] = "Fire";
+
 
 
     } else if (numP12 == 2) {
       spells.getPoisonSpells();
-      sOfChoiceP1 [1] = "Poison";
+
 
     } else if (numP12 == 3) {
       spells.getWaterSpells();
-      sOfChoiceP1 [1] = "Water";
+
 
     } else if (numP12 == 4) {
       spells.getWoodCraftSpells();
-      sOfChoiceP1 [1] = "Wood";
+
 
     } else if (numP12 == 5) {
       spells.getSummonSpells();
-      sOfChoiceP1 [1] = "Summon";
+
     }
 
 
@@ -139,29 +135,27 @@ public class BattleOfDor {
 
     if (numP22 == 1) {
       spells.getFireSpells();
-      sOfChoiceP2 [1] = "Fire";
+      //spellsP1.add(Spells spells = n;
 
 
     } else if (numP22 == 2) {
       spells.getPoisonSpells();
-      sOfChoiceP2 [1] = "Poison";
+
 
     } else if (numP22 == 3) {
       spells.getWaterSpells();
-      sOfChoiceP2 [1] = "Water";
+
 
     } else if (numP22 == 4) {
       spells.getWoodCraftSpells();
-      sOfChoiceP2 [1] = "Wood";
+
 
 
     } else if (numP22 == 5) {
-      spells.getSummonSpells();
-      sOfChoiceP2 [1] = "Summon";
+      spells.getSummonSpells();;
     }
 
-    System.out.println(sOfChoiceP1[0]);
-    System.out.println(sOfChoiceP1[1]);
+
     System.out.println("Make your move, 1 or 2: ");
     int choice = Main.scanner.nextInt();
 
