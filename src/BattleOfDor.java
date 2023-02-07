@@ -3,24 +3,47 @@ import java.util.List;
 
 public class BattleOfDor {
 
+  static Player player1 = new Player(200, 20, 10, 10);
+  static Player player2 = new Player(200, 20, 20, 10);
+
   static String player1Name = "Druid of Gord";
   static String player2Name = "Wizard of Oaks";
 
-  ArrayList<String> spellsP1 = new ArrayList<>();
-  ArrayList<String> spellsP2 = new ArrayList<>();
+  static ArrayList<String> spellsP1 = new ArrayList<>();
+  static ArrayList<String> spellsP2 = new ArrayList<>();
+
+  static Dice dice1P1 = new Dice();
+  static Dice dice2P1 = new Dice();
+  static Dice dice3P1 = new Dice();
+
+  static Dice dice1P2 = new Dice();
+  static Dice dice2P2 = new Dice();
+  static Dice dice3P2 = new Dice();
 
   public void storyLine() {
 
-    Dice dice1P1 = new Dice();
-    Dice dice2P1 = new Dice();
-
-    Dice dice1P2 = new Dice();
-    Dice dice2P2 = new Dice();
 
 
-    Player player1 = new Player(200, 20, 10, 10);
-    Player player2 = new Player(200, 20, 20, 10);
 
+    roundOne();
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+  private void roundOne() {
+
+
+    Spells spells = new Spells();
+    spells.setSpells();
 
     int sumOfP1 = 0;
     sumOfP1 += player1.getKnowledge();
@@ -34,78 +57,6 @@ public class BattleOfDor {
     sumOfP2 += player2.getTower();
     sumOfP2 += player2.getCloak();
 
-
-    System.out.println(sumOfP1);
-
-    System.out.println(sumOfP2);
-
-
-    spellChoice();
-
-    System.out.println(spellsP1);
-    System.out.println();
-    System.out.println(player1Name + " Choice:\n" + spellsP1);
-    System.out.println("Make your move, 1 or 2: ");
-    int choiceP1 = Main.scanner.nextInt();
-
-    System.out.println(spellsP1);
-    System.out.println(player2Name + " Choice:\n" + spellsP1);
-    System.out.println("Make your move, 1 or 2: ");
-    int choiceP2 = Main.scanner.nextInt();
-
-
-
-    if (choiceP1 == 1 && choiceP2 == 1) {
-
-      String s1 = spellsP1.get(0);
-      String s2 = spellsP2.get(0);
-
-      System.out.println("\n\n");
-      System.out.println(player1Name + " resources: "+"    VS     " + player2Name + " resources: "
-              + "\nGold: " + player1.getGold()  +     "                           " + "Gold: " + player2.getGold()
-              + "\nTower: " + player1.getTower() +"                           " + "Tower: " + player2.getTower()
-              + "\nKnowledge: " + player1.getKnowledge() +"                       " + "Knowledge: " + player2.getKnowledge()
-              + "\nCloak: " + player1.getCloak() +"                           " + "Cloak: " + player2.getCloak()
-              + "\nTotal: " + sumOfP1 + "                          " + "Total: " + sumOfP2);
-      System.out.println(s1 +"                        " + s2);
-
-
-      System.out.println();
-      System.out.println(s1 + " VS " + s2);
-
-
-    }
-
-
-    System.out.print(player1Name + ": \nPress 1 to roll the dice: ");
-    Main.scanner.nextInt();
-    System.out.println(dice1P1.getDice());
-
-    System.out.print(player2Name + ": \nPress 1 to roll the dice: ");
-    Main.scanner.nextInt();
-    System.out.println(dice1P1.getDice());
-    //IF
-    //IF
-
-
-
-
-
-  }
-
-
-
-
-
-
-
-  private void spellChoice() {
-
-
-
-
-    Spells spells = new Spells();
-    spells.setSpells();
 
 
     System.out.print(player1Name + "; Choose your first spell: ");
@@ -159,8 +110,6 @@ public class BattleOfDor {
       spellsP2.add(spells.summonSpells.get(0).getName());
 
     }
-
-
 
     System.out.print(player1Name + "; Choose your second spell: ");
 
@@ -219,10 +168,91 @@ public class BattleOfDor {
 
     System.out.println();
 
+    System.out.println();
+    System.out.println(player1Name + " Choice:\n" + spellsP1);
+    System.out.println("Make your move, 1 or 2: ");
+    int choiceP1 = Main.scanner.nextInt();
+
+
+    System.out.println(player2Name + " Choice:\n" + spellsP2);
+    System.out.println("Make your move, 1 or 2: ");
+    int choiceP2 = Main.scanner.nextInt();
+
+    if (choiceP1 == 1 && choiceP2 == 1) {
+
+      String s1 = spellsP1.get(0);
+      String s2 = spellsP2.get(0);
+
+      System.out.println("\n\n");
+      System.out.println(player1Name + ": "+"    VS     " + player2Name + " resources: "
+              + "\nGold: " + player1.getGold()  +     "                           " + "Gold: " + player2.getGold()
+              + "\nTower: " + player1.getTower() +"                           " + "Tower: " + player2.getTower()
+              + "\nKnowledge: " + player1.getKnowledge() +"                       " + "Knowledge: " + player2.getKnowledge()
+              + "\nCloak: " + player1.getCloak() +"                           " + "Cloak: " + player2.getCloak()
+              + "\nTotal: " + sumOfP1 + "                          " + "Total: " + sumOfP2);
+      System.out.println();
+      System.out.println(s1 +"                        " + s2);
+      System.out.println();
+
+      //Dices
+      System.out.print(player1Name + ": \nPress 1 to roll the dice: ");
+      Main.scanner.nextInt();
+      System.out.println(dice1P1.getDice());
+      System.out.println();
+
+      System.out.print(player2Name + ": \nPress 1 to roll the dice: ");
+      Main.scanner.nextInt();
+      System.out.println(dice1P2.getDice());
+      System.out.println();
+
+      //Result
+      System.out.println(player1Name + " cast : [" + s1 +"] with [+"+ dice1P1.getDice() + "]");
+      System.out.println(player2Name + " cast : [" + s2 +"] with [+"+ dice1P2.getDice() + "]");
+      //Result
+      System.out.println(sumOfP1);
+      System.out.println(sumOfP2);
+      //IF
+      if (s1.equals(spells.fireSpells.get(0).getName())) {
+        sumOfP1 += 4;
+
+        System.out.println(player1Name + ", you have casted a fire-spell, press 1 to roll a third dice: ");
+        Main.scanner.nextInt();
+        System.out.println("You rolled a: " + dice3P1.getDice());
+
+        if (dice3P1.getDice() <= 3 ) {
+          dice3P1.setDice(0);
+          System.out.println("You lost the control over the fire, the extra dice is now lost");
+        }
+
+        if (s2.equals(spells.waterSpells.get(0).getName())) {
+         int diceEffectP1 = (dice1P1.getDice() + dice2P1.getDice() + dice3P1.getDice()) / 2;
+         sumOfP1 -= 2;
+          System.out.println(diceEffectP1);
+        }
+      }
+
+      if (s2.equals(spells.fireSpells.get(0).getName())) {
+        sumOfP2 += 4;
+
+        if (dice3P2.getDice() <= 3) {
+          dice3P1.setDice(0);
+          System.out.println("You lost the control over the fire, the extra dice is now lost");
+        }
+
+        if (s1.equals(spells.waterSpells.get(0).getName())) {
+         int diceEffectP2 = (dice1P2.getDice() + dice2P2.getDice() + dice3P2.getDice()) / 2;
+          sumOfP2 -= 2;
+          System.out.println(diceEffectP2);
+        }
+
+      }
+      System.out.println(sumOfP1);
+      System.out.println(sumOfP2);
 
 
     }
   }
+}
 
 
 
