@@ -6,13 +6,10 @@ public class BattleOfDor {
   static String player1Name = "Druid of Gord";
   static String player2Name = "Wizard of Oaks";
 
+  ArrayList<String> spellsP1 = new ArrayList<>();
+  ArrayList<String> spellsP2 = new ArrayList<>();
+
   public void storyLine() {
-
-    Spells spells = new Spells();
-    spells.setSpells();
-
-    ArrayList<String> spellsP1 = new ArrayList<>();
-    ArrayList<String> spellsP2 = new ArrayList<>();
 
     Dice dice1P1 = new Dice();
     Dice dice2P1 = new Dice();
@@ -21,8 +18,8 @@ public class BattleOfDor {
     Dice dice2P2 = new Dice();
 
 
-    Player player1 = new Player(200, 20, 10, 10, "Wizard of Oak");
-    Player player2 = new Player(200, 20, 20, 10, "Druid");
+    Player player1 = new Player(200, 20, 10, 10);
+    Player player2 = new Player(200, 20, 20, 10);
 
 
     int sumOfP1 = 0;
@@ -42,7 +39,73 @@ public class BattleOfDor {
 
     System.out.println(sumOfP2);
 
+
+    spellChoice();
+
+    System.out.println(spellsP1);
     System.out.println();
+    System.out.println(player1Name + " Choice:\n" + spellsP1);
+    System.out.println("Make your move, 1 or 2: ");
+    int choiceP1 = Main.scanner.nextInt();
+
+    System.out.println(spellsP1);
+    System.out.println(player2Name + " Choice:\n" + spellsP1);
+    System.out.println("Make your move, 1 or 2: ");
+    int choiceP2 = Main.scanner.nextInt();
+
+
+
+    if (choiceP1 == 1 && choiceP2 == 1) {
+
+      String s1 = spellsP1.get(0);
+      String s2 = spellsP2.get(0);
+
+      System.out.println("\n\n");
+      System.out.println(player1Name + " resources: "+"    VS     " + player2Name + " resources: "
+              + "\nGold: " + player1.getGold()  +     "                           " + "Gold: " + player2.getGold()
+              + "\nTower: " + player1.getTower() +"                           " + "Tower: " + player2.getTower()
+              + "\nKnowledge: " + player1.getKnowledge() +"                       " + "Knowledge: " + player2.getKnowledge()
+              + "\nCloak: " + player1.getCloak() +"                           " + "Cloak: " + player2.getCloak()
+              + "\nTotal: " + sumOfP1 + "                          " + "Total: " + sumOfP2);
+      System.out.println(s1 +"                        " + s2);
+
+
+      System.out.println();
+      System.out.println(s1 + " VS " + s2);
+
+
+    }
+
+
+    System.out.print(player1Name + ": \nPress 1 to roll the dice: ");
+    Main.scanner.nextInt();
+    System.out.println(dice1P1.getDice());
+
+    System.out.print(player2Name + ": \nPress 1 to roll the dice: ");
+    Main.scanner.nextInt();
+    System.out.println(dice1P1.getDice());
+    //IF
+    //IF
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+  private void spellChoice() {
+
+
+
+
+    Spells spells = new Spells();
+    spells.setSpells();
 
 
     System.out.print(player1Name + "; Choose your first spell: ");
@@ -50,27 +113,25 @@ public class BattleOfDor {
     int numP1 = Main.scanner.nextInt();
 
     if (numP1 == 1) {
-     spells.getFireSpells();
-     spellsP1.add(spells.fireSpells.get(0).getName());
+      spells.getFireSpells();
+      spellsP1.add(spells.fireSpells.get(0).getName());
 
     } else if (numP1 == 2) {
       spells.getPoisonSpells();
-        spellsP1.add(spells.poisonSpells.get(0).getName());
+      spellsP1.add(spells.poisonSpells.get(0).getName());
 
     } else if (numP1 == 3) {
       spells.getWaterSpells();
       spellsP1.add(spells.waterSpells.get(0).getName());
 
     } else if (numP1 == 4) {
-    spells.getWoodCraftSpells();
-        spellsP1.add(spells.woodCraftSpells.get(0).getName());
+      spells.getWoodCraftSpells();
+      spellsP1.add(spells.woodCraftSpells.get(0).getName());
 
     } else if (numP1 == 5) {
-    spells.getSummonSpells();
-        spellsP1.add(spells.summonSpells.get(0).getName());
-  }
-
-
+      spells.getSummonSpells();
+      spellsP1.add(spells.summonSpells.get(0).getName());
+    }
 
 
     System.out.print(player2Name + "; Choose your first spell: ");
@@ -78,8 +139,7 @@ public class BattleOfDor {
 
     if (numP2 == 1) {
       spells.getFireSpells();
-        spellsP2.add(spells.fireSpells.get(0).getName());
-
+      spellsP2.add(spells.fireSpells.get(0).getName());
 
     } else if (numP2 == 2) {
       spells.getPoisonSpells();
@@ -99,6 +159,7 @@ public class BattleOfDor {
       spellsP2.add(spells.summonSpells.get(0).getName());
 
     }
+
 
 
     System.out.print(player1Name + "; Choose your second spell: ");
@@ -129,8 +190,6 @@ public class BattleOfDor {
     }
 
 
-
-
     System.out.print(player2Name + "; Choose your second spell: ");
     int numP22 = Main.scanner.nextInt();
 
@@ -155,28 +214,17 @@ public class BattleOfDor {
 
     } else if (numP22 == 5) {
       spells.getSummonSpells();
-      spellsP1.add(spells.summonSpells.get(0).getName());
+      spellsP2.add(spells.summonSpells.get(0).getName());
     }
 
+    System.out.println();
 
-    System.out.println("Make your move, 1 or 2: ");
-    int choice = Main.scanner.nextInt();
 
-    if (choice == 1) {
-      System.out.println("första valet");
+
     }
-
-    System.out.print(player1Name + "Press 1 to roll the dice: ");
-    Main.scanner.nextInt();
-    System.out.println(dice1P1.getDice());
-
-
-    System.out.print("Spell nr 2; ");
-    int spell1P2 = Main.scanner.nextInt();
-
-
   }
-}
+
+
 
 
 

@@ -74,13 +74,10 @@ public class Spells {
         return waterSpells;
     }
 
-
     public List<Spell> getFireSpells() {
         for (Spell f : fireSpells) {
-            System.out.println(f.getName());
+            f.getName();
             }
-
-
         return fireSpells;
     }
 }
