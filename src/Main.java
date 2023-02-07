@@ -6,20 +6,10 @@ public class Main {
 
     static Scanner scanner = new Scanner(System.in);
 
-
-
-
-
-
     public static void main(String[] args) {
 
         Spells spells = new Spells();
         spells.setSpells();
-
-
-
-
-
 
         do {
 
@@ -29,16 +19,17 @@ public class Main {
             int option = getOption();
 
             if (option == 1) {
-                WolfAttack wolfAttack = new WolfAttack();
-                wolfAttack.wolAttack();
+                WizardChoice name = new WizardChoice();
+                name.chooseName();
+                name.chooseWizard();
+
 
 
             } else if (option == 2) {
-
-
-            } else if (option == 3) {
                 BattleOfDor battleOfDor = new BattleOfDor();
                 battleOfDor.storyLine();
+
+            } else if (option == 3) {
 
 
 
@@ -61,7 +52,7 @@ public class Main {
 
     private static void displayMenu() {
         System.out.println("____________________\n - Wizard Wars -\n");
-        System.out.println("1: The Wolfs");
+        System.out.println("1: Choose Wizards");
         System.out.println("2: The market in Redwoods");
         System.out.println("3: The gathering in Wian");
         System.out.println("4: Rules");
