@@ -10,6 +10,10 @@ public class WizardChoice {
     private String player2Name;
     private String player3Name;
 
+    public WizardChoice() {
+
+    }
+
     public void chooseName() {
 
         System.out.println("how many players: ");
@@ -130,12 +134,12 @@ public class WizardChoice {
                 '}';
     }
     private static void displayMenu() {
-        System.out.println("____________________\n - Wizard Wars -\n");
-        System.out.println("1: Choose Wizards");
-        System.out.println("2: The market in Redwoods");
-        System.out.println("3: The gathering in Wian");
-        System.out.println("4: Rules");
-        System.out.println("5: Exit");
+        System.out.println("____________________\n - Wizards -\n");
+        System.out.println("1: Wizard of fire");
+        System.out.println("2: Wizard of the Deep");
+        System.out.println("3: Wizard of Woodcraft");
+        System.out.println("4: Druid");
+        System.out.println("5: Wizard of Light");
     }
 
     static int getOption() {
