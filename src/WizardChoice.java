@@ -62,24 +62,44 @@ public class WizardChoice {
          if (option == 1) {
              System.out.println("^*^*^*^* Wizard of Fire ^*^*^*^*");
              System.out.println();
-             System.out.println("Gold: 100\nTower: 20\nKnowledge: 10\nCloak: 20\n+4 in total\nSplit your opponents dice in 2, if they use a water-spell.");
+             System.out.println("Gold: 100\nTower: 20\nKnowledge: 10\nCloak: 20\nDouble the effect of Firespells\nDecrease your opponent dice by half, if they use a water-spell.");
              System.out.println();
              System.out.println("CV: \n\nNormally a Fire Wizard is very impulsive and not so smart, that´s why the cashflow is low and the knowledge is lacking. " +
-                     "But a Wizard of Fire need a big and strong tower to explore the effect of firespells, and also an High-cloak for protection against heat and explotions. ");
+                     "But a Wizard of Fire needs a big and strong tower to explore the effect of firespells, and also an High-cloak for protection against heat and explotions. ");
 
 
          } else if (option == 2) {
-
+             System.out.println("^*^*^*^* Wizard of the Deep ^*^*^*^*");
+             System.out.println();
+             System.out.println("Gold: 150\nTower: 10\nKnowledge: 20\nCloak: 10\nDouble the effect of water-spells\nDecrease your opponent dice by half, if they use a fire-spell.");
+             System.out.println();
+             System.out.println("CV: \n\nWizard of the Deep. ");
 
          } else if (option == 3) {
+             System.out.println("^*^*^*^* Wizard of Woodcraft ^*^*^*^*");
+             System.out.println();
+             System.out.println("Gold: 100\nTower: 20\nKnowledge: 10\nCloak: 10\nDouble the effect of woodcraft-spells\n");
+             System.out.println();
+             System.out.println("CV: \n\nWizard of Woodcraft.");
 
 
 
          } else if (option == 4) {
-
-
+             System.out.println("^*^*^*^* Druid ^*^*^*^*");
+             System.out.println();
+             System.out.println("Gold: 200\nTower: 20\nKnowledge: 30 \nCloak: 5\nDouble the effect of poison-spells\n");
+             System.out.println();
+             System.out.println("CV: \n\nDruid.");
 
          } else if (option == 5) {
+             System.out.println("^*^*^*^* Wizard of Black Art ^*^*^*^*");
+             System.out.println();
+             System.out.println("Gold: 150\nTower: 20\nKnowledge: 20 \nCloak: 10\nDouble the effect of Summon-spells\n");
+             System.out.println();
+             System.out.println("CV: \n\nBlack art.");
+
+
+         } else if (option == 6) {
              System.out.println("Exiting.....");
              break;
          }
