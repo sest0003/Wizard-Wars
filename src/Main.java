@@ -20,7 +20,7 @@ public class Main {
 
             if (option == 1) {
                 WizardChoice name = new WizardChoice();
-                name.chooseName();
+              //  name.chooseName();
                 name.chooseWizard();
 
 
