@@ -3,8 +3,6 @@ import java.util.List;
 import java.util.Scanner;
 
 
-
-
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
@@ -19,7 +17,14 @@ public class Main {
         System.out.println(spells.fireSpells.get(0).getName().indexOf("Dragon Blood"));
 
         Players players = new Players();
-        System.out.println(players.playerList.get(0).getName());
+
+        String player1 = players.playerList.get(0).getName();
+
+        System.out.println(player1);
+
+        Players players1 = new Players();
+
+        System.out.println(players.playerList.get(0).getDescription());
 
 
 

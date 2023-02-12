@@ -57,12 +57,12 @@ public class WizardChoice {
             int option = getOption();
 
             if (option == 1) {
-                System.out.println("^*^*^*^* Wizard of Fire ^*^*^*^*");
+                System.out.println("^*^*^*^* Wizard of Fire ^*^*^*^*\n\nGold: 100\\nTower: 20\\nKnowledge: 10\\nCloak: 20\\nDouble the effect of Firespells\\nDecrease your opponent dice by half, if they use a water-spell.\n\n\nNormally a Fire Wizard is very impulsive and not so smart, that´s why the cashflow is low and the knowledge is lacking. \" +\n" +
+                        "                        \"But a Wizard of Fire needs a big and strong tower to explore the effect of firespells, and also an High-cloak for protection against heat and explosions.");
+
                 System.out.println();
-                System.out.println("Gold: 100\nTower: 20\nKnowledge: 10\nCloak: 20\nDouble the effect of Firespells\nDecrease your opponent dice by half, if they use a water-spell.");
                 System.out.println();
-                System.out.println("CV: \nNormally a Fire Wizard is very impulsive and not so smart, that´s why the cashflow is low and the knowledge is lacking. " +
-                        "But a Wizard of Fire needs a big and strong tower to explore the effect of firespells, and also an High-cloak for protection against heat and explotions. ");
+                System.out.println("CV:");
 
                 do {
                     System.out.println("Pick this wizard: Press 1");

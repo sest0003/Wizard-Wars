@@ -2,6 +2,7 @@ public class Player {
 
 
     private String name;
+    private String description;
     private int gold;
     private int cloak;
     private int knowledge;
@@ -22,8 +23,9 @@ public class Player {
 
     }
 
-    public Player(String name, int gold, int cloak, int knowledge, int tower) {
+    public Player(String name,String description, int gold, int cloak, int knowledge, int tower) {
         this.name = name;
+        this.description = description;
         this.gold = gold;
         this.tower = tower;
         this.knowledge = knowledge;
@@ -31,6 +33,7 @@ public class Player {
 
     }
 
+    public String getDescription() {return description;}
 
     public String getName() {return name;}
 

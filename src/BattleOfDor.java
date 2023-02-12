@@ -3,8 +3,8 @@ import java.util.List;
 
 public class BattleOfDor {
 
-  static Player player1 = new Player("blabla",200, 20, 10, 10);
-  static Player player2 = new Player("blabla", 200, 20, 20, 10);
+  static Player player1 = new Player("dld","blabla",200, 20, 10, 10);
+  static Player player2 = new Player("blb","blabla", 200, 20, 20, 10);
 
   static String player1Name = "Druid of Gord";
   static String player2Name = "Wizard of Oaks";

@@ -13,8 +13,8 @@ public class WolfAttack {
 
         int wolfs = 715;
 
-       Player player1 = new Player("blabla", 200, 20, 10,10);
-        Player player2 = new Player("blabla",200, 20, 20,10);
+       Player player1 = new Player("blabla","Deep", 200, 20, 10,10);
+        Player player2 = new Player("blabla","Deep",200, 20, 20,10);
 
     Scanner scanner = new Scanner(System.in);
 
