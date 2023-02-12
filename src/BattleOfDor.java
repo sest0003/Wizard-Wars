@@ -3,8 +3,8 @@ import java.util.List;
 
 public class BattleOfDor {
 
-  static Player player1 = new Player(200, 20, 10, 10);
-  static Player player2 = new Player(200, 20, 20, 10);
+  static Player player1 = new Player("blabla",200, 20, 10, 10);
+  static Player player2 = new Player("blabla", 200, 20, 20, 10);
 
   static String player1Name = "Druid of Gord";
   static String player2Name = "Wizard of Oaks";
@@ -33,7 +33,7 @@ public class BattleOfDor {
 
 
     Spells spells = new Spells();
-    spells.setSpells();
+
 
     int sumOfP1 = 0;
     sumOfP1 += player1.getKnowledge();
@@ -65,7 +65,7 @@ public class BattleOfDor {
       spellsP1.add(spells.waterSpells.get(0).getName());
 
     } else if (numP1 == 4) {
-      spells.getWoodCraftSpells();
+      spells.getWood();
       spellsP1.add(spells.woodCraftSpells.get(0).getName());
 
     } else if (numP1 == 5) {
@@ -90,7 +90,7 @@ public class BattleOfDor {
       spellsP2.add(spells.waterSpells.get(0).getName());
 
     } else if (numP2 == 4) {
-      spells.getWoodCraftSpells();
+      spells.getWood();
       spellsP2.add(spells.woodCraftSpells.get(0).getName());
 
 
@@ -118,7 +118,7 @@ public class BattleOfDor {
       spellsP1.add(spells.waterSpells.get(0).getName());
 
     } else if (numP12 == 4) {
-      spells.getWoodCraftSpells();
+      spells.getWood();
       spellsP1.add(spells.woodCraftSpells.get(0).getName());
 
     } else if (numP12 == 5) {
@@ -146,7 +146,7 @@ public class BattleOfDor {
       spellsP2.add(spells.waterSpells.get(0).getName());
 
     } else if (numP22 == 4) {
-      spells.getWoodCraftSpells();
+      spells.getWood();
       spellsP2.add(spells.woodCraftSpells.get(0).getName());
 
 

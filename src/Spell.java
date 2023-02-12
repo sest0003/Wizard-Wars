@@ -1,16 +1,13 @@
 public class Spell {
+
     private String name;
-    private int fire =   1;
-    private int water =  2;
-    private int poison = 3;
-    private int wood =   4;
-    private int  summon =5;
+    private String decription;
 
-
-
-    public Spell(String name) {
+    public Spell(String name, String decription) {
         this.name = name;
+        this.decription = decription;
     }
+
 
     public String getName() {
         return name;
@@ -20,23 +17,11 @@ public class Spell {
         this.name = name;
     }
 
-    public int getFire() {
-        return fire;
+    public String getdecription() {
+        return decription;
     }
 
-    public int getWater() {
-        return water;
-    }
-
-    public int getPoison() {
-        return poison;
-    }
-
-    public int getWood() {
-        return wood;
-    }
-
-    public int getSummon() {
-        return summon;
+    public void setDecription(String decription) {
+        this.decription = decription;
     }
 }

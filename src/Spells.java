@@ -17,41 +17,42 @@ public class Spells {
 
     List<Spell> fireSpells = new ArrayList<>();
 
-
-
-    public void setSpells() {
-
-
-        fireSpells.add(new Spell("Dragon Blood"));
-
-
-        waterSpells.add(new Spell("Calling the deep"));
-
-
-        summonSpells.add(new Spell("The Summon of Demons"));
-
-
-        poisonSpells.add(new Spell("The black Leafs of Dandun"));
-
-
-        woodCraftSpells.add(new Spell("Summon the Oaks"));
-
-        System.out.println();
-
-        System.out.println("1: " + fireSpells.get(0).getName());
-        System.out.println("2: " + poisonSpells.get(0).getName());
-        System.out.println("3: " + waterSpells.get(0).getName());
-        System.out.println("4: " + woodCraftSpells.get(0).getName());
-        System.out.println("5: " + summonSpells.get(0).getName());
-
-    }
-
     public List<Spell> getWoodCraftSpells() {
-        for (Spell wood : fireSpells) {
-           wood.getName();
-        }
         return woodCraftSpells;
     }
+
+    public Spells() {
+
+
+        fireSpells.add(new Spell("Dragon Blood", "fkfkf"));
+        fireSpells.add(new Spell("Forest Fire", "fkfkf"));
+
+        waterSpells.add(new Spell("Calling the deep", "dkdkd"));
+
+
+        summonSpells.add(new Spell("The Summon of Demons", "dldld"));
+
+
+        poisonSpells.add(new Spell("The black Leafs of Dandun", "dkdkd"));
+
+
+        woodCraftSpells.add(new Spell("Summon the Oaks", "gkgkg"));
+
+
+
+
+    }
+
+
+    public Spell getWood() {
+        for (Spell wood : woodCraftSpells) {
+
+                return wood;
+        }
+        return null;
+    }
+
+
 
     public List<Spell> getPoisonSpells() {
         for (Spell p : fireSpells) {
@@ -80,6 +81,8 @@ public class Spells {
             }
         return fireSpells;
     }
+
+
 }
 
 
