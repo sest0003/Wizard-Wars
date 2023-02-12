@@ -10,6 +10,8 @@ public class Main {
     public static void main(String[] args) {
 
 
+        SetCharacter set = new SetCharacter();
+
       /*  Spells spells = new Spells();
 
         System.out.println(spells.fireSpells.get(0).getName());
@@ -26,13 +28,7 @@ public class Main {
 
         System.out.println(players.playerList.get(0).getDescription());*/
 
-        SetCharacter set = new SetCharacter();
-
-
-        set.chooseName();
-        set.chooseWizard();
-
-
+        //System.out.println(set.wizards.get(0).getDescription());
 
 
             do {
@@ -43,14 +39,11 @@ public class Main {
             int option = getOption();
 
             if (option == 1) {
-               // WizardChoice name = new WizardChoice();
-                //  name.chooseName();
-                //name.chooseWizard();
+                set.chooseName();
 
 
             } else if (option == 2) {
-              //  BattleOfDor battleOfDor = new BattleOfDor();
-               // battleOfDor.storyLine();
+                set.chooseWizard();
 
             } else if (option == 3) {
 
@@ -61,6 +54,8 @@ public class Main {
 
 
             } else if (option == 5) {
+               // System.out.println(set.getPlayer1Name().toString() + set.wizards.get(0).getDescription());
+               // System.out.println(set.getPlayer2Name().toString() + set.wizards.get(1).getDescription());
                 System.out.println("Exiting.....");
                 break;
             }
@@ -73,8 +68,8 @@ public class Main {
 
     private static void displayMenu() {
         System.out.println("____________________\n - Wizard Wars -\n");
-        System.out.println("1: Wizard of choice");
-        System.out.println("2: The market in Redwoods");
+        System.out.println("1: Choose name");
+        System.out.println("2: Choose Wizard");
         System.out.println("3: The battle of Dor");
         System.out.println("4: Rules");
         System.out.println("5: Exit");
