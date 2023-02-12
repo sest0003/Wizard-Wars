@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Spells spells = new Spells();
+      /*  Spells spells = new Spells();
 
         System.out.println(spells.fireSpells.get(0).getName());
 
@@ -24,7 +24,13 @@ public class Main {
 
         Players players1 = new Players();
 
-        System.out.println(players.playerList.get(0).getDescription());
+        System.out.println(players.playerList.get(0).getDescription());*/
+
+        SetCharacter set = new SetCharacter();
+
+
+        set.chooseName();
+        set.chooseWizard();
 
 
 
@@ -61,9 +67,6 @@ public class Main {
 
 
         } while (true);}
-
-
-
 
 
 
