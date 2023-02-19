@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 
@@ -11,37 +9,17 @@ public class Main {
 
         Computers computers = new Computers();
         computers.setCPlayer();
-        System.out.println(computers.computerList.get(0).getName());
-        System.out.println();
-        System.out.println(computers.computerList.get(1).getName());
-        System.out.println();
-        System.out.println(computers.computerList.get(2).getName());
-
 
         SetCharacter set = new SetCharacter();
+        set.chooseName();
+        set.chooseWizard();
+
+
+
+
         Spells s = new Spells();
-        System.out.println(s.getFireSpells().get(0).getdecription());
 
 
-
-
-      /*  Spells spells = new Spells();
-
-        System.out.println(spells.fireSpells.get(0).getName());
-
-        System.out.println(spells.fireSpells.get(0).getName().indexOf("Dragon Blood"));
-
-        Players players = new Players();
-
-        String player1 = players.playerList.get(0).getName();
-
-        System.out.println(player1);
-
-        Players players1 = new Players();
-
-        System.out.println(players.playerList.get(0).getDescription());*/
-
-        //System.out.println(set.wizards.get(0).getDescription());
 
 
             do {
@@ -52,14 +30,11 @@ public class Main {
             int option = getOption();
 
             if (option == 1) {
-                set.chooseWizard();
-                System.out.println(set.wizards.get(0).getName());
-                System.out.println(set.wizards.get(1).getName());
+
 
 
             } else if (option == 2) {
-                Spells s1 = new Spells(); s1.bocHord();
-                System.out.println(s1.spellsOfP1.get(0).getName() + "\n"+ (s1.spellsOfP1.get(1).getName()));
+
 
             } else if (option == 3) {
 

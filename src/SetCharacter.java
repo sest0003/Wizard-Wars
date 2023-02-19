@@ -3,46 +3,41 @@ import java.util.List;
 
 public class SetCharacter {
 
-    private int nPlayers;
+    static int nPlayers;
 
     private String player1Name;
     private String player2Name;
     private String player3Name;
 
-    public String getPlayer1Name() {
-        return player1Name;
-    }
+    int wChoiceP1 = 0;
+    int wChoiceP2 = 0;
+    int wChoiceP3 = 0;
 
-    public String getPlayer2Name() {
-        return player2Name;
-    }
-
-    public String getPlayer3Name() {
-        return player3Name;
-    }
 
     List<Player> wizards = new ArrayList<>();
 
 
-
-    public void chooseWizard(){
+    public void chooseName() {
+        // CHOOSE NUM PLAYERS AND NAME
 
         System.out.println();
         System.out.print("Enter the number of players: ");
-        int nPlayers =  Main.scanner.nextInt();
+        nPlayers = Main.scanner.nextInt();
 
         if (nPlayers == 1) {
             System.out.println("What is your name wizard?");
             player1Name = Main.scanner.next();
 
+
         }
 
         if (nPlayers == 2) {
             System.out.println("Player 1; what is your name?");
-            String player1Name = Main.scanner.next();
+            player1Name = Main.scanner.next();
 
             System.out.println("Player 2, what is your name?");
-            String player2Name = Main.scanner.next();
+            player2Name = Main.scanner.next();
+
         }
 
         if (nPlayers == 3) {
@@ -51,137 +46,506 @@ public class SetCharacter {
 
 
             System.out.println("Player 2, what is your name?");
-            String player2Name = Main.scanner.next();
+            player2Name = Main.scanner.next();
 
 
             System.out.println("Player 3, what is your name?");
-            String player3Name = Main.scanner.next();
+            player3Name = Main.scanner.next();
 
 
         } else if (nPlayers >= 4) {
             System.out.println("There can only be max 3 players, please try again");
+
         }
+    }
+
+    public void chooseWizard() {
 
 
+        // CHOOSE WIZARD
         if (nPlayers == 1) {
-            System.out.println(player1Name + " Choose your Wizard"); getWizard();
-            System.out.println(getPlayer1Name());
+
+            Boolean chooseW = false;
+
+            System.out.println();
+            System.out.println(player1Name + " Choose your Wizard");
+
+            do {
+
+                displayMenu();
+
+                int option = getOption();
+
+                if (option == 1) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(0).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(0));
+                    }
+                } else if (option == 2) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(1).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(1));
+                    }
+                } else if (option == 3) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(2).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(2));
+                    }
+
+
+                } else if (option == 4) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(3).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(3));
+                    }
+
+
+                } else if (option == 5) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(4).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(4));
+                    }
+                } else if (option == 6) {
+                    System.out.println("Exiting.....");
+                    break;
+                }
+
+                if (wChoiceP1 == 1) {
+                    chooseW = true;
+                }
+
+
+            } while (chooseW = false);
+
         }
 
-        else if (nPlayers == 2) {
-            System.out.println(player1Name + " Choose your Wizard"); getWizard();
-            System.out.println(player2Name + " Choose your Wizard"); getWizard();
-            System.out.println(getPlayer1Name());
-            System.out.println(getPlayer2Name());
+        //2 players
+        if (nPlayers == 2) {
+
+            Boolean chooseW = false;
+
+            System.out.println();
+            System.out.println(player1Name + " Choose your Wizard");
+
+            do {
+
+                displayMenu();
+
+                int option = getOption();
+
+                if (option == 1) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(0).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(0));
+                    }
+                } else if (option == 2) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(1).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(1));
+                    }
+                } else if (option == 3) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(2).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(2));
+                    }
+
+
+                } else if (option == 4) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(3).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(3));
+                    }
+
+
+                } else if (option == 5) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(4).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(4));
+                    }
+                } else if (option == 6) {
+                    System.out.println("Exiting.....");
+                    break;
+                }
+
+                if (wChoiceP1 == 1) {
+                    chooseW = true;
+                }
+
+
+            } while (chooseW = false);
+
+           //player 2
+            Boolean chooseW2 = false;
+
+            System.out.println();
+            System.out.println(player2Name + " Choose your Wizard");
+
+            do {
+
+                displayMenu();
+
+                int option = getOption();
+
+                if (option == 1) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(0).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP2 = Main.scanner.nextInt();
+
+                    if (wChoiceP2 == 1) {
+                        wizards.add(p.playerList.get(0));
+                    }
+                } else if (option == 2) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(1).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP2 = Main.scanner.nextInt();
+
+                    if (wChoiceP2 == 1) {
+                        wizards.add(p.playerList.get(1));
+                    }
+                } else if (option == 3) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(2).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP2 = Main.scanner.nextInt();
+
+                    if (wChoiceP2 == 1) {
+                        wizards.add(p.playerList.get(2));
+                    }
+
+
+                } else if (option == 4) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(3).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP2 = Main.scanner.nextInt();
+
+                    if (wChoiceP2 == 1) {
+                        wizards.add(p.playerList.get(3));
+                    }
+
+
+                } else if (option == 5) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(4).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP2 == 1) {
+                        wizards.add(p.playerList.get(4));
+                    }
+                } else if (option == 6) {
+                    System.out.println("Exiting.....");
+                    break;
+                }
+
+                if (wChoiceP2 == 1) {
+                    chooseW2 = true;
+                }
+
+
+            } while (chooseW2 = false);
+
+
         }
 
-        else if (nPlayers == 3) {
-            System.out.println(player1Name + " Choose your Wizard"); getWizard();
-            System.out.println(player2Name + " Choose your Wizard"); getWizard();
-            System.out.println(player3Name + " Choose your Wizard"); getWizard();
-            System.out.println(getPlayer1Name());
-            System.out.println(getPlayer2Name());
-            System.out.println(getPlayer3Name());
+        if (nPlayers == 3) {
+            Boolean chooseW = false;
+
+            System.out.println();
+            System.out.println(player1Name + " Choose your Wizard");
+
+            do {
+
+                displayMenu();
+
+                int option = getOption();
+
+                if (option == 1) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(0).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(0));
+                    }
+                } else if (option == 2) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(1).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(1));
+                    }
+                } else if (option == 3) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(2).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(2));
+                    }
+
+
+                } else if (option == 4) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(3).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(3));
+                    }
+
+
+                } else if (option == 5) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(4).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP1 == 1) {
+                        wizards.add(p.playerList.get(4));
+                    }
+                } else if (option == 6) {
+                    System.out.println("Exiting.....");
+                    break;
+                }
+
+                if (wChoiceP1 == 1) {
+                    chooseW = true;
+                }
+
+
+            } while (chooseW = false);
+
+            //player 2
+            Boolean chooseW2 = false;
+
+            System.out.println();
+            System.out.println(player2Name + " Choose your Wizard");
+
+            do {
+
+                displayMenu();
+
+                int option = getOption();
+
+                if (option == 1) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(0).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP2 = Main.scanner.nextInt();
+
+                    if (wChoiceP2 == 1) {
+                        wizards.add(p.playerList.get(0));
+                    }
+                } else if (option == 2) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(1).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP2 = Main.scanner.nextInt();
+
+                    if (wChoiceP2 == 1) {
+                        wizards.add(p.playerList.get(1));
+                    }
+                } else if (option == 3) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(2).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP2 = Main.scanner.nextInt();
+
+                    if (wChoiceP2 == 1) {
+                        wizards.add(p.playerList.get(2));
+                    }
+
+
+                } else if (option == 4) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(3).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP2 = Main.scanner.nextInt();
+
+                    if (wChoiceP2 == 1) {
+                        wizards.add(p.playerList.get(3));
+                    }
+
+
+                } else if (option == 5) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(4).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP1 = Main.scanner.nextInt();
+
+                    if (wChoiceP2 == 1) {
+                        wizards.add(p.playerList.get(4));
+                    }
+                } else if (option == 6) {
+                    System.out.println("Exiting.....");
+                    break;
+                }
+
+                if (wChoiceP2 == 1) {
+                    chooseW2 = true;
+                }
+
+
+            } while (chooseW2 = false);
+
+            //player 3
+            Boolean chooseW3 = false;
+
+            System.out.println();
+            System.out.println(player3Name + " Choose your Wizard");
+
+            do {
+
+                displayMenu();
+
+                int option = getOption();
+
+                if (option == 1) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(0).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP3 = Main.scanner.nextInt();
+
+                    if (wChoiceP3 == 1) {
+                        wizards.add(p.playerList.get(0));
+                    }
+                } else if (option == 2) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(1).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP3 = Main.scanner.nextInt();
+
+                    if (wChoiceP3 == 1) {
+                        wizards.add(p.playerList.get(1));
+                    }
+                } else if (option == 3) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(2).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP3 = Main.scanner.nextInt();
+
+                    if (wChoiceP3 == 1) {
+                        wizards.add(p.playerList.get(2));
+                    }
+
+
+                } else if (option == 4) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(3).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP3 = Main.scanner.nextInt();
+
+                    if (wChoiceP3 == 1) {
+                        wizards.add(p.playerList.get(3));
+                    }
+
+
+                } else if (option == 5) {
+                    Players p = new Players();
+                    System.out.println(p.playerList.get(4).getDescription());
+                    System.out.println();
+                    System.out.println("To choose this Wizard, press [1] to exit press [2]");
+                    wChoiceP3 = Main.scanner.nextInt();
+
+                    if (wChoiceP3 == 1) {
+                        wizards.add(p.playerList.get(4));
+                    }
+                } else if (option == 6) {
+                    System.out.println("Exiting.....");
+                    break;
+                }
+
+                if (wChoiceP3 == 1) {
+                    chooseW3 = true;
+                }
+
+
+            } while (chooseW3 = false);
         }
 
+
+
+
+
     }
-
-
-
-    private void getWizard() {
-        do {
-
-            displayMenu();
-
-            int option = getOption();
-
-            if (option == 1) {
-                Players p = new Players();
-                System.out.println(p.playerList.get(0).getDescription());
-                System.out.println();
-                System.out.println("To choose this Wizard, press [1] to exit press [2]");
-                int cP1 = Main.scanner.nextInt();
-
-                if (cP1 == 1) {
-                    wizards.add(p.playerList.get(0));
-
-                } else {
-                    break;
-                }
-            } else if (option == 2) {
-                Players p = new Players();
-                System.out.println(p.playerList.get(1).getDescription());
-                System.out.println();
-                System.out.println("To choose this Wizard, press [1] to exit press [2]");
-                int cP1 = Main.scanner.nextInt();
-
-                if (cP1 == 1) {
-                    wizards.add(p.playerList.get(1));
-
-                } else {
-                    break;
-                }
-            } else if (option == 3) {
-                Players p = new Players();
-                System.out.println(p.playerList.get(2).getDescription());
-                System.out.println();
-                System.out.println("To choose this Wizard, press [1] to exit press [2]");
-                int cP1 = Main.scanner.nextInt();
-
-                if (cP1 == 1) {
-                    wizards.add(p.playerList.get(2));
-
-                } else {
-                    break;
-                }
-            } else if (option == 4) {
-                Players p = new Players();
-                System.out.println(p.playerList.get(3).getDescription());
-                System.out.println();
-                System.out.println("To choose this Wizard, press [1] to exit press [2]");
-                int cP1 = Main.scanner.nextInt();
-
-                if (cP1 == 1) {
-                    wizards.add(p.playerList.get(3));
-
-                } else {
-                    break;
-                }
-            } else if (option == 5) {
-                Players p = new Players();
-                System.out.println(p.playerList.get(4).getDescription());
-                System.out.println();
-                System.out.println("To choose this Wizard, press [1] to exit press [2]");
-                int cP1 = Main.scanner.nextInt();
-
-                if (cP1 == 1) {
-                    wizards.add(p.playerList.get(4));
-
-                } else {
-                    break;
-                }
-            } else if (option == 6) {
-                System.out.println("Exiting.....");
-                break;
-            }
-
-
-        } while (true);
-    }
-
-
-
-    @Override
-    public String toString() {
-        return "SetCharacter{" +
-                "player1Name='" + player1Name + '\'' +
-                ", player2Name='" + player2Name + '\'' +
-                ", player3Name='" + player3Name + '\'' +
-                '}';
-    }
-
-
-    private static void displayMenu() {
+    private static void displayMenu () {
         System.out.println();
         System.out.println("^*^*^*^*  Wizards  ^*^*^*^*");
         System.out.println();
@@ -194,13 +558,12 @@ public class SetCharacter {
     }
 
 
-    static int getOption() {
+    static int getOption () {
         System.out.print("\nEnter option: ");
         int option = Main.scanner.nextInt();
         Main.scanner.nextLine();
         System.out.println();
         return option;
     }
-
 
 }
