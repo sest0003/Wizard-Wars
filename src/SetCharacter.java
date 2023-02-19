@@ -1,13 +1,19 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class SetCharacter {
 
     static int nPlayers;
 
-    private String player1Name;
-    private String player2Name;
-    private String player3Name;
+    String player1Name;
+    String player2Name;
+    String player3Name;
+
+    String name;
+
+    static List<String> playerNames = new ArrayList<>();
 
     int wChoiceP1 = 0;
     int wChoiceP2 = 0;
@@ -57,6 +63,11 @@ public class SetCharacter {
             System.out.println("There can only be max 3 players, please try again");
 
         }
+
+        playerNames.add(player1Name);
+        playerNames.add(player2Name);
+        playerNames.add(player3Name);
+
     }
 
     public void chooseWizard() {
@@ -565,5 +576,22 @@ public class SetCharacter {
         System.out.println();
         return option;
     }
+
+    public List<String> getPlayerNames() {
+        return playerNames;
+    }
+
+    public String getPlayer1Name() {
+        return player1Name;
+    }
+
+    public String getPlayer2Name() {
+        return player2Name;
+    }
+
+    public String getPlayer3Name() {
+        return player3Name;
+    }
+
 
 }
