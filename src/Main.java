@@ -9,10 +9,20 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Computers computers = new Computers();
+        computers.setCPlayer();
+        System.out.println(computers.computerList.get(0).getName());
+        System.out.println();
+        System.out.println(computers.computerList.get(1).getName());
+        System.out.println();
+        System.out.println(computers.computerList.get(2).getName());
+
 
         SetCharacter set = new SetCharacter();
-       Spells s = new Spells();
+        Spells s = new Spells();
         System.out.println(s.getFireSpells().get(0).getdecription());
+
+
 
 
       /*  Spells spells = new Spells();

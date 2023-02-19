@@ -15,22 +15,10 @@ public class BattleOfDor {
 
   public void storyLine() {
 
-    roundOne();
 
-  }
-
-
-  private void roundOne() {
-
-    private int dice = ThreadLocalRandom.current().nextInt(1, 5);
-    SetCharacter s = new SetCharacter();
-
-
-    if (dice == 1) {
 
 
     }
-
 
 
 
@@ -262,7 +250,7 @@ public class BattleOfDor {
 
 
         }
-      }
+
 
 
 
