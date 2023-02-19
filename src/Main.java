@@ -11,6 +11,9 @@ public class Main {
 
 
         SetCharacter set = new SetCharacter();
+       Spells s = new Spells();
+        System.out.println(s.getFireSpells().get(0).getdecription());
+
 
       /*  Spells spells = new Spells();
 
@@ -39,11 +42,14 @@ public class Main {
             int option = getOption();
 
             if (option == 1) {
-                set.chooseName();
+                set.chooseWizard();
+                System.out.println(set.wizards.get(0).getName());
+                System.out.println(set.wizards.get(1).getName());
 
 
             } else if (option == 2) {
-                set.chooseWizard();
+                Spells s1 = new Spells(); s1.bocHord();
+                System.out.println(s1.spellsOfP1.get(0).getName() + "\n"+ (s1.spellsOfP1.get(1).getName()));
 
             } else if (option == 3) {
 
@@ -56,6 +62,7 @@ public class Main {
             } else if (option == 5) {
                // System.out.println(set.getPlayer1Name().toString() + set.wizards.get(0).getDescription());
                // System.out.println(set.getPlayer2Name().toString() + set.wizards.get(1).getDescription());
+
                 System.out.println("Exiting.....");
                 break;
             }
@@ -67,9 +74,10 @@ public class Main {
 
 
     private static void displayMenu() {
-        System.out.println("____________________\n - Wizard Wars -\n");
-        System.out.println("1: Choose name");
-        System.out.println("2: Choose Wizard");
+        System.out.println("^*^*^*^*  The spells of boc-hord  ^*^*^*^*");
+        System.out.println();
+        System.out.println("1:  Choose Wizard");
+        System.out.println("2: The spells of boc-hord");
         System.out.println("3: The battle of Dor");
         System.out.println("4: Rules");
         System.out.println("5: Exit");

@@ -1,16 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class BattleOfDor {
 
-  static Player player1 = new Player("dld","blabla",200, 20, 10, 10);
-  static Player player2 = new Player("blb","blabla", 200, 20, 20, 10);
-
-  static String player1Name = "Druid of Gord";
-  static String player2Name = "Wizard of Oaks";
-
-  static ArrayList<String> spellsP1 = new ArrayList<>();
-  static ArrayList<String> spellsP2 = new ArrayList<>();
 
   static Dice dice1P1 = new Dice();
   static Dice dice2P1 = new Dice();
@@ -22,17 +15,43 @@ public class BattleOfDor {
 
   public void storyLine() {
 
-
     roundOne();
-
 
   }
 
 
   private void roundOne() {
 
+    private int dice = ThreadLocalRandom.current().nextInt(1, 5);
+    SetCharacter s = new SetCharacter();
 
-    Spells spells = new Spells();
+
+    if (dice == 1) {
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*  Spells spells = new Spells();
 
 
     int sumOfP1 = 0;
@@ -238,8 +257,8 @@ public class BattleOfDor {
             }
 
           }
-          System.out.println(sumOfP1);
-          System.out.println(sumOfP2);
+          */
+
 
 
         }
