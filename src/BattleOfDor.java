@@ -6,8 +6,8 @@ public class BattleOfDor {
 
 
     Players p;
-    SetCharacter setCharacter;
-    Computers computers;
+
+
 
     Dice dice1P1;
     Dice dice2P1;
@@ -21,122 +21,142 @@ public class BattleOfDor {
   int sumOfComputer2 = 0;
   int sumOfComputer3 = 0;
 
-  Computers computers = new Computers();
 
 
-  public void storyLine(List<Spell> spellsOfP1, List<Spell> spellsOfP2, List<Spell> spellsOfP3, List<Player> playerList, List<Player> wizards, List<Player> computerList) {
+
+  public void storyLine(Spells spells, List<Player> playerList, List<Player> wizards, List<Player> computerList, List<String> playerNames) {
+
 
       System.out.println("Storyline");
+        //uppställning
 
-      System.out.println(spellsOfP1.get(0).getdecription());
+      vsplayers(playerNames, wizards, spells);
+      System.out.println();
+      System.out.println("----- VS -----");
+      System.out.println();
+      vsEnemy(computerList, wizards);
 
-      vsEnemy();
+      battle(spells, playerList, wizards,computerList, playerNames);
 
-      vsplayers(setCharacter, spellsOfP1, spellsOfP2, spellsOfP3, wizards);
+
 
     }
 
+   public void battle(Spells spells, List<Player> playerList, List<Player> wizards, List<Player> computerList, List<String> playerNames) {
+
+       System.out.println(playerNames.get(0) + " , your move, cast your spell! : ");
+
+       spells.getSpellsOfP1();
+
+       System.out.println("Choose a spell");
+       int choice1 = Main.scanner.nextInt();
+
+       if (choice1 == 1){
+           System.out.println("Fire in the hole:");
+           System.out.println(spells.spellsOfP1.get(0).getName());
+
+       } else if (choice1 == 2) {
+           System.out.println("Fire in the hole:");
+           System.out.println(spells.spellsOfP1.get(1).getName());
+       }
+   }
 
 
+    public void vsEnemy(List<Player> computerList, List<Player> wizards) {
 
 
-    public void vsEnemy(List<Player> playerList, SetCharacter setCharacter) {
+          if (wizards.size() == 1 ) {
 
-
-          if (setCharacter.getnPlayers() == 1 ) {
-
-              System.out.println("This is who you are facing;");
-              System.out.println("Bobba-W:");
               System.out.println();
-            System.out.println(computers.computerList.get(0).getName());
-            System.out.println(computers.computerList.get(0).getDescription());
-            System.out.println(computers.computerList.get(0).getGold());
-            System.out.println(computers.computerList.get(0).getCloak());
-            System.out.println(computers.computerList.get(0).getKnowledge());
-            System.out.println(computers.computerList.get(0).getTower());
+            System.out.println(computerList.get(0).getName());
+            System.out.println(computerList.get(0).getDescription());
+            System.out.println("Gold: " + computerList.get(0).getGold());
+            System.out.println("Cloak: " + computerList.get(0).getCloak());
+            System.out.println("Knowledge: " + computerList.get(0).getKnowledge());
+            System.out.println("Tower: " + computerList.get(0).getTower());
           }
 
-             else if (setCharacter.getnPlayers() == 2 ) {
-              System.out.println("This is who you are facing;");
-              System.out.println("Bobba-W:");
+             else if (wizards.size() == 2 ) {
+
               System.out.println();
 
-              System.out.println(computers.computerList.get(0).getName());
-              System.out.println(computers.computerList.get(0).getDescription());
-              System.out.println(computers.computerList.get(0).getGold());
-              System.out.println(computers.computerList.get(0).getCloak());
-              System.out.println(computers.computerList.get(0).getKnowledge());
-              System.out.println(computers.computerList.get(0).getTower());
+              System.out.println(computerList.get(0).getName());
+              System.out.println(computerList.get(0).getDescription());
+              System.out.println(computerList.get(0).getGold());
+              System.out.println(computerList.get(0).getCloak());
+              System.out.println(computerList.get(0).getKnowledge());
+              System.out.println(computerList.get(0).getTower());
               System.out.println();
               System.out.println("------");
               System.out.println();
               System.out.println("Z:");
               System.out.println();
-            System.out.println(computers.computerList.get(1).getName());
-            System.out.println(computers.computerList.get(1).getDescription());
-            System.out.println(computers.computerList.get(1).getGold());
-            System.out.println(computers.computerList.get(1).getCloak());
-            System.out.println(computers.computerList.get(1).getKnowledge());
-            System.out.println(computers.computerList.get(1).getTower());
+            System.out.println(computerList.get(1).getName());
+            System.out.println(computerList.get(1).getDescription());
+            System.out.println(computerList.get(1).getGold());
+            System.out.println(computerList.get(1).getCloak());
+            System.out.println(computerList.get(1).getKnowledge());
+            System.out.println(computerList.get(1).getTower());
           }
 
-             else if (setCharacter.getnPlayers() == 3 ) {
-              System.out.println("Bobba-W:");
+             else if (wizards.size() == 3 ) {
+
               System.out.println();
-              System.out.println(computers.computerList.get(0).getName());
-              System.out.println(computers.computerList.get(0).getDescription());
-              System.out.println(computers.computerList.get(0).getGold());
-              System.out.println(computers.computerList.get(0).getCloak());
-              System.out.println(computers.computerList.get(0).getKnowledge());
-              System.out.println(computers.computerList.get(0).getTower());
-              System.out.println();
-              System.out.println("------");
-              System.out.println();
-              System.out.println("Z:");
-              System.out.println();
-              System.out.println(computers.computerList.get(1).getName());
-              System.out.println(computers.computerList.get(1).getDescription());
-              System.out.println(computers.computerList.get(1).getGold());
-              System.out.println(computers.computerList.get(1).getCloak());
-              System.out.println(computers.computerList.get(1).getKnowledge());
-              System.out.println(computers.computerList.get(1).getTower());
+
+              System.out.println(computerList.get(0).getName());
+              System.out.println(computerList.get(0).getDescription());
+              System.out.println(computerList.get(0).getGold());
+              System.out.println(computerList.get(0).getCloak());
+              System.out.println(computerList.get(0).getKnowledge());
+              System.out.println(computerList.get(0).getTower());
               System.out.println();
               System.out.println("------");
               System.out.println();
-              System.out.println("Coco-Trollkarl:");
+
               System.out.println();
-              System.out.println(computers.computerList.get(2).getName());
-              System.out.println(computers.computerList.get(2).getDescription());
-              System.out.println(computers.computerList.get(2).getGold());
-              System.out.println(computers.computerList.get(2).getCloak());
-              System.out.println(computers.computerList.get(2).getKnowledge());
-              System.out.println(computers.computerList.get(2).getTower());
+              System.out.println(computerList.get(1).getName());
+              System.out.println(computerList.get(1).getDescription());
+              System.out.println(computerList.get(1).getGold());
+              System.out.println(computerList.get(1).getCloak());
+              System.out.println(computerList.get(1).getKnowledge());
+              System.out.println(computerList.get(1).getTower());
+              System.out.println("------");
+              System.out.println();
+
+              System.out.println();
+              System.out.println(computerList.get(2).getName());
+              System.out.println(computerList.get(2).getDescription());
+              System.out.println(computerList.get(2).getGold());
+              System.out.println(computerList.get(2).getCloak());
+              System.out.println(computerList.get(2).getKnowledge());
+              System.out.println(computerList.get(2).getTower());
               System.out.println();
              }
 
           }
 
-    public void vsplayers(SetCharacter setCharacter, List<Spell> spellsOfP1, List<Spell> spellsOfP2, List<Spell> spellsOfP3, List<Player> wizards) {
+    public void vsplayers(List<String> setCharacter, List<Player> wizards, Spells spells) {
 
-        if (setCharacter.getnPlayers() == 1 ) {
-            System.out.println(spellsOfP1.get(0).getdecription());
+        if (wizards.size() == 1 ) {
+            System.out.println(wizards.get(0).getName());
+            System.out.println(wizards.get(0).getDescription());
+            System.out.println(wizards.get(0).getGold());
+            System.out.println(wizards.get(0).getCloak());
+            System.out.println(wizards.get(0).getKnowledge());
+            System.out.println(wizards.get(0).getTower());
+            System.out.println();
+            System.out.println("spells:");
+            spells.getSpellsOfP1();
         }
 
 
-        else if (setCharacter.getnPlayers() == 2 ) {
-            System.out.println(spellsOfP1.get(0).getdecription());
-            System.out.println("-----------------");
-            System.out.println(spellsOfP1.get(1).getdecription());
+        else if (wizards.size() == 2 ) {
+
 
         }
 
-        else if (setCharacter.getnPlayers() == 3 ) {
-            System.out.println("-----------------");
-            System.out.println(spellsOfP1.get(0).getdecription());
-            System.out.println("-----------------");
-            System.out.println(spellsOfP1.get(1).getdecription());
-            System.out.println("-----------------");
-            System.out.println(spellsOfP1.get(2).getdecription());
+        else if (wizards.size() == 3 ) {
+
 
         }
 

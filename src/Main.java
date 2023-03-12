@@ -10,12 +10,19 @@ public class Main {
         Spells spells = new Spells();
         Players p = new Players();
         Computers computers = new Computers();
-
+        computers.setComputerPlayer();
         SetCharacter set = new SetCharacter();
 
+        //testkaraktär
+        set.wizards.add(p.playerList.get(0));
+        spells.spellsOfP1.add(spells.getFireSpells().get(0));
+        spells.spellsOfP1.add(spells.getPoisonSpells().get(0));
+       set.playerNames.add("Hox");
+        System.out.println(set.getPlayerNames().get(0));
 
-        set.chooseName();
-        set.chooseWizard();
+
+      /*  set.chooseName();
+        set.chooseWizard();*/
 
 
 
@@ -33,12 +40,8 @@ public class Main {
 
 
             } else if (option == 2) {
-                System.out.println(spells.spellsOfP1.get(0).getdecription());
-                System.out.println(set.getPlayerNames().get(0));
-                System.out.println(p.playerList.get(0).getName());
-
                 BattleOfDor battle1 = new BattleOfDor();
-                battle1.storyLine(spells.spellsOfP1, spells.spellsOfP2, spells.spellsOfP3, p.playerList, set.wizards, computers.computerList);
+                battle1.storyLine(spells, p.playerList, set.wizards, computers.computerList, set.playerNames);
 
 
 

@@ -596,4 +596,14 @@ public class SetCharacter {
     public int getnPlayers() {
         return nPlayers;
     }
+
+    @Override
+    public String toString() {
+        return "SetCharacter{" +
+                "wizards=" + wizards +
+                '}';
+    }
+
+
+
 }

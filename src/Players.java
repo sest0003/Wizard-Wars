@@ -13,15 +13,16 @@ public class Players {
                 100, 20, 10, 20));
 
 
-        playerList.add(new Player("Wizard of the Deep","Deep", 150, 10, 20, 10));
+        playerList.add(new Player("Wizard of the Deep","Deep+", 150, 10, 20, 10));
 
-        playerList.add(new Player("Wizard of Woodcraft","Wood", 100, 10, 10, 20));
+        playerList.add(new Player("Wizard of Woodcraft","Wood+", 100, 10, 10, 20));
 
-        playerList.add(new Player(" Druid","poison", 200, 5, 30, 20));
+        playerList.add(new Player(" Druid","poison+", 200, 5, 30, 20));
 
-        playerList.add(new Player("Wizard of Black Art","Black", 150, 10, 20, 20));
+        playerList.add(new Player("Wizard of Black Art","Black+", 150, 10, 20, 20));
 
     }
+
 
     public List<Player> getPlayerList() {
         return playerList;

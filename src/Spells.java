@@ -27,6 +27,13 @@ public class Spells {
     List<Spell> spellsOfC3 = new ArrayList<>();
 
 
+    public void getSpellsOfP1() {
+        for (Spell s : spellsOfP1) {
+            System.out.println(s.getName());
+            System.out.println(s.getdecription());
+        }
+
+    }
 
     public Spells() {
 
@@ -51,7 +58,7 @@ public class Spells {
         System.out.println("Enter your name wizard, to get access to Boc-Hord:");
         String name = Main.scanner.next();
 
-        if (name.equals(players.getPlayerNames().get(0)) && !(getSpellsOfP1().size() >= 2)) {
+        if (name.equals(players.getPlayerNames().get(0))) {
 
             int c = 0;
 
@@ -503,9 +510,6 @@ public class Spells {
         return fireSpells;
     }
 
-    public List<Spell> getSpellsOfP1() {
-        return spellsOfP1;
-    }
 
     public List<Spell> getSpellsOfP2() {
         return spellsOfP2;
@@ -546,7 +550,6 @@ public class Spells {
         System.out.println();
         return option;
     }
-
 
 }
 
