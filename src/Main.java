@@ -8,11 +8,8 @@ public class Main {
     public static void main(String[] args) {
 
         Spells spells = new Spells();
-        spells.spellsOfC1.add(spells.getFireSpells().get(0));
-        System.out.println(spells.getSpellsOfC1().get(0).getName());
-
+        Players p = new Players();
         Computers computers = new Computers();
-        computers.setCPlayer();
 
         SetCharacter set = new SetCharacter();
 
@@ -36,6 +33,13 @@ public class Main {
 
 
             } else if (option == 2) {
+                System.out.println(spells.spellsOfP1.get(0).getdecription());
+                System.out.println(set.getPlayerNames().get(0));
+                System.out.println(p.playerList.get(0).getName());
+
+                BattleOfDor battle1 = new BattleOfDor();
+                battle1.storyLine(spells.spellsOfP1, spells.spellsOfP2, spells.spellsOfP3, p.playerList, set.wizards, computers.computerList);
+
 
 
 

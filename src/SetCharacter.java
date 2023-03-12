@@ -593,5 +593,7 @@ public class SetCharacter {
         return player3Name;
     }
 
-
+    public int getnPlayers() {
+        return nPlayers;
+    }
 }

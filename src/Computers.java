@@ -6,7 +6,7 @@ public class Computers {
 
     List<Player> computerList = new ArrayList<>();
 
-    public void setCPlayer(){
+    public void setComputerPlayer(){
         int compDice1 = ThreadLocalRandom.current().nextInt(1, 5);
         int compDice2 = ThreadLocalRandom.current().nextInt(1, 5);
         int compDice3 = ThreadLocalRandom.current().nextInt(1, 5);

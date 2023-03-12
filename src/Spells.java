@@ -6,8 +6,6 @@ import java.util.List;
 public class Spells {
 
 
-
-
     List<Spell> woodCraftSpells = new ArrayList<>();
 
     List<Spell> poisonSpells = new ArrayList<>();
@@ -20,25 +18,17 @@ public class Spells {
 
 
     List<Spell> spellsOfP1 = new ArrayList<>();
-
-
     List<Spell> spellsOfP2 = new ArrayList<>();
-
     List<Spell> spellsOfP3 = new ArrayList<>();
 
 
     List<Spell> spellsOfC1 = new ArrayList<>();
-
     List<Spell> spellsOfC2 = new ArrayList<>();
-
     List<Spell> spellsOfC3 = new ArrayList<>();
 
 
 
     public Spells() {
-
-
-
 
         fireSpells.add(new Spell("\n^*^*^*^* Dragon Blood ^*^*^*^*", "\nDescription:\n+ 4 in total\n2 extra dice, if you roll over 3\nDecrease your opponent dice by half, if they use a water-spell.\n+ 10 Cloak"));
         fireSpells.add(new Spell("\n^*^*^*^* Forest Fire ^*^*^*^*", "fkfkf"));
