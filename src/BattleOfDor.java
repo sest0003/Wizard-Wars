@@ -52,10 +52,10 @@ public class BattleOfDor {
        System.out.println(playerNames.get(0) +  " ,Choose your first spell: ");
        spells.getSpellsOfP1();
        int choice1 = Main.scanner.nextInt();
-   '
-       System.out.println(playerNames.get(0) + " , your move, cast your spell! : ");
 
+       System.out.println(playerNames.get(0) +  " ,Choose your second spell: ");
        spells.getSpellsOfP1();
+       int choice1 = Main.scanner.nextInt();
 
 
        if (choice1 == 1 ) {

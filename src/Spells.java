@@ -28,24 +28,31 @@ public class Spells {
 
 
     public void getSpellsOfP1() {
+        int index=1;
         for (Spell s : spellsOfP1) {
-            System.out.println(s.getName());
+            System.out.println();
+            System.out.println((index++) + ": " + s.getName());
             System.out.println("--------");
             System.out.println(s.getdecription());
         }
     }
 
     public void getSpellsOfP2() {
+        int index=1;
         for (Spell s : spellsOfP2) {
-            System.out.println(s.getName());
+            System.out.println();
+            System.out.println((index++) + ": " + s.getName());
             System.out.println("--------");
             System.out.println(s.getdecription());
         }
     }
 
     public void getSpellsOfP3() {
+        int index=1;
         for (Spell s : spellsOfP3) {
-            System.out.println(s.getName());
+            System.out.println();
+            System.out.println((index++) + ": " + s.getName());
+            System.out.println();
             System.out.println("--------");
             System.out.println(s.getdecription());
         }
@@ -218,7 +225,7 @@ public class Spells {
 
 
         //Player 2
-        if (name.equals(players.getPlayerNames().get(1)) && !(getSpellsOfP2().size() >= 2)) {
+        if (name.equals(players.getPlayerNames().get(1))) {
 
             int c = 0;
 
@@ -354,7 +361,7 @@ public class Spells {
 
 
         //Player 3
-        if (name.equals(players.getPlayerNames().get(2)) && !(getSpellsOfP2().size() >= 2)) {
+        if (name.equals(players.getPlayerNames().get(2))) {
 
             int c = 0;
 
