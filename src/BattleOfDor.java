@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -44,21 +45,41 @@ public class BattleOfDor {
 
    public void battle(Spells spells, List<Player> playerList, List<Player> wizards, List<Player> computerList, List<String> playerNames) {
 
+       ArrayList<Spell> gameSpellsP1 = null;
+       ArrayList<Spell> gameSpellsP2 = null;
+       ArrayList<Spell> gameSpellsP3 = null;
+
+       System.out.println(playerNames.get(0) +  " ,Choose your first spell: ");
+       spells.getSpellsOfP1();
+       int choice1 = Main.scanner.nextInt();
+   '
        System.out.println(playerNames.get(0) + " , your move, cast your spell! : ");
 
        spells.getSpellsOfP1();
 
-       System.out.println("Choose a spell");
-       int choice1 = Main.scanner.nextInt();
 
-       if (choice1 == 1){
+       if (choice1 == 1 ) {
+           gameSpellsP1.add(new Spell(spells.spellsOfP1.get(0)));
            System.out.println("Fire in the hole:");
            System.out.println(spells.spellsOfP1.get(0).getName());
-
-       } else if (choice1 == 2) {
+       }
+        else if (choice1 == 2) {
+           gameSpellsP1.add(new Spell(spells.spellsOfP1.get(1)));
            System.out.println("Fire in the hole:");
            System.out.println(spells.spellsOfP1.get(1).getName());
        }
+        else if (choice1 == 3) {
+            gameSpellsP1.add(new Spell(spells.spellsOfP1.get(2)));
+           System.out.println("Fire in the hole:");
+           System.out.println(spells.spellsOfP1.get(2).getName());
+           }
+        else if (choice1 == 4) {
+            gameSpellsP1.add(new Spell(spells.spellsOfP1.get(3)));
+           System.out.println("Fire in the hole:");
+           System.out.println(spells.spellsOfP1.get(3).getName());
+           }
+
+
    }
 
 

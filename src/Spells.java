@@ -30,10 +30,29 @@ public class Spells {
     public void getSpellsOfP1() {
         for (Spell s : spellsOfP1) {
             System.out.println(s.getName());
+            System.out.println("--------");
             System.out.println(s.getdecription());
         }
-
     }
+
+    public void getSpellsOfP2() {
+        for (Spell s : spellsOfP2) {
+            System.out.println(s.getName());
+            System.out.println("--------");
+            System.out.println(s.getdecription());
+        }
+    }
+
+    public void getSpellsOfP3() {
+        for (Spell s : spellsOfP3) {
+            System.out.println(s.getName());
+            System.out.println("--------");
+            System.out.println(s.getdecription());
+        }
+    }
+
+
+
 
     public Spells() {
 
@@ -511,13 +530,6 @@ public class Spells {
     }
 
 
-    public List<Spell> getSpellsOfP2() {
-        return spellsOfP2;
-    }
-
-    public List<Spell> getSpellsOfP3() {
-        return spellsOfP3;
-    }
 
     public List<Spell> getSpellsOfC1() {
         return spellsOfC1;

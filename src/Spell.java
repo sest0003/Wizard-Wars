@@ -8,6 +8,9 @@ public class Spell {
         this.decription = decription;
     }
 
+    public Spell(Spell spell) {
+    }
+
 
     public String getName() {
         return name;
