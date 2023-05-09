@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
@@ -13,21 +12,17 @@ public class Main {
         computers.setComputerPlayer();
         SetCharacter set = new SetCharacter();
 
-        //testkaraktär
+        // testkaraktär
         set.wizards.add(p.playerList.get(0));
         spells.spellsOfP1.add(spells.getFireSpells().get(0));
         spells.spellsOfP1.add(spells.getPoisonSpells().get(0));
-       set.playerNames.add("Hox");
+        set.playerNames.add("Hox");
         System.out.println(set.getPlayerNames().get(0));
 
-
-      /*  set.chooseName();
+       /* set.chooseName();
         set.chooseWizard();*/
 
-
-
-            do {
-
+        do {
 
             displayMenu();
 
@@ -36,38 +31,28 @@ public class Main {
             if (option == 1) {
                 spells.bocHord();
 
-
-
-
             } else if (option == 2) {
                 BattleOfDor battle1 = new BattleOfDor();
                 battle1.storyLine(spells, p.playerList, set.wizards, computers.computerList, set.playerNames);
 
-
-
-
-
             } else if (option == 3) {
-
 
             } else if (option == 4) {
                 Rules rules = new Rules();
                 rules.printRules();
 
-
             } else if (option == 5) {
-               // System.out.println(set.getPlayer1Name().toString() + set.wizards.get(0).getDescription());
-               // System.out.println(set.getPlayer2Name().toString() + set.wizards.get(1).getDescription());
+                // System.out.println(set.getPlayer1Name().toString() +
+                // set.wizards.get(0).getDescription());
+                // System.out.println(set.getPlayer2Name().toString() +
+                // set.wizards.get(1).getDescription());
 
                 System.out.println("Exiting.....");
                 break;
             }
 
-
-        } while (true);}
-
-
-
+        } while (true);
+    }
 
     private static void displayMenu() {
         System.out.println("^*^*^*^*  The spells of Boc-hord  ^*^*^*^*");
@@ -87,8 +72,3 @@ public class Main {
         return option;
     }
 }
-
-
-
-
-

@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Spells {
+    private int randomNumber = ThreadLocalRandom.current().nextInt(1, 8);
 
 
     List<Spell> woodCraftSpells = new ArrayList<>();
@@ -22,16 +23,60 @@ public class Spells {
     List<Spell> spellsOfP3 = new ArrayList<>();
 
 
+    ArrayList<Spell> gameSpellsP1 = null;
+    ArrayList<Spell> gameSpellsP2 = null;
+    ArrayList<Spell> gameSpellsP3 = null;
+
+
+
     List<Spell> spellsOfC1 = new ArrayList<>();
     List<Spell> spellsOfC2 = new ArrayList<>();
     List<Spell> spellsOfC3 = new ArrayList<>();
 
+    public Spell randomSpell () {
+        Spell random = null;
+
+        List<Spell> randomSpellList = new ArrayList<>();
+        randomSpellList.add(fireSpells.get(0));
+        randomSpellList.add(fireSpells.get(1));
+        randomSpellList.add(waterSpells.get(0));
+        randomSpellList.add(poisonSpells.get(0));
+        randomSpellList.add(woodCraftSpells.get(0));
+        randomSpellList.add(summonSpells.get(0));
+
+
+        if (randomNumber == 1) {
+            random = randomSpellList.get(0);
+        }
+        if (randomNumber == 2) {
+           random = randomSpellList.get(1);
+        }
+        if (randomNumber == 3) {
+            random = randomSpellList.get(2);
+        }
+        if (randomNumber == 4) {
+            random = randomSpellList.get(3);
+        }
+        if (randomNumber == 5) {
+            random = randomSpellList.get(4);
+        }
+        if (randomNumber == 6) {
+            random = randomSpellList.get(5);
+        }
+        if (randomNumber == 7) {
+            random = randomSpellList.get(6);
+        }
+        return random;
+    }
+
+
+    List<Spell> randomSpellList = new ArrayList<>();
+
 
     public void getSpellsOfP1() {
-        int index=1;
         for (Spell s : spellsOfP1) {
             System.out.println();
-            System.out.println((index++) + ": " + s.getName());
+            System.out.println((s.getId()) + ": " + s.getName());3
             System.out.println("--------");
             System.out.println(s.getdecription());
         }
@@ -63,16 +108,16 @@ public class Spells {
 
     public Spells() {
 
-        fireSpells.add(new Spell("\n^*^*^*^* Dragon Blood ^*^*^*^*", "\nDescription:\n+ 4 in total\n2 extra dice, if you roll over 3\nDecrease your opponent dice by half, if they use a water-spell.\n+ 10 Cloak"));
-        fireSpells.add(new Spell("\n^*^*^*^* Forest Fire ^*^*^*^*", "fkfkf"));
+        fireSpells.add(new Spell("\n^*^*^*^* Dragon Blood ^*^*^*^*", "\nDescription:\n+ 4 in total\n2 extra dice, if you roll over 3\nDecrease your opponent dice by half, if they use a water-spell.\n+ 10 Cloak", 1,1));
+        fireSpells.add(new Spell("\n^*^*^*^* Forest Fire ^*^*^*^*", "fkfkf",1,2));
 
-        waterSpells.add(new Spell("\n^*^*^*^* Calling the deep ^*^*^*^*\n", "\nDescription:\n+5 in total\n1x extra dice\nDecrease your opponent dice by half, if they use a fire-spell."));
+        waterSpells.add(new Spell("\n^*^*^*^* Calling the deep ^*^*^*^*\n", "\nDescription:\n+5 in total\n1x extra dice\nDecrease your opponent dice by half, if they use a fire-spell.",2, 3));
 
-        summonSpells.add(new Spell("^*^*^*^* The Summon of Demons ^*^*^*^*", "Description:\n+3 in total\n2x extra dice, but if you roll double or both dice are 3 or under, you lose the extra dice.\n +50 Gold"));
+        summonSpells.add(new Spell("^*^*^*^* The Summon of Demons ^*^*^*^*", "Description:\n+3 in total\n2x extra dice, but if you roll double or both dice are 3 or under, you lose the extra dice.\n +50 Gold",3,4));
 
-        poisonSpells.add(new Spell("^*^*^*^* The black Leafs of Dandun ^*^*^*^*", "Description:\n+2 in total\nDecrease your opponent dice by half regardless what spells the opponent plays.\n+10 Knowledge"));
+        poisonSpells.add(new Spell("^*^*^*^* The black Leafs of Dandun ^*^*^*^*", "Description:\n+2 in total\nDecrease your opponent dice by half regardless what spells the opponent plays.\n+10 Knowledge",4, 5));
 
-        woodCraftSpells.add(new Spell("^*^*^*^* Summon the Oaks ^*^*^*^*", "Description:\n +4 in total\n1x extra dice, if you roll 2, 4 or 6 \nDecrease your opponent dice by half, if they roll 4 or over.\n+2 Cloak"));
+        woodCraftSpells.add(new Spell("^*^*^*^* Summon the Oaks ^*^*^*^*", "Description:\n +4 in total\n1x extra dice, if you roll 2, 4 or 6 \nDecrease your opponent dice by half, if they roll 4 or over.\n+2 Cloak",5,6));
     }
 
     public void bocHord() {
